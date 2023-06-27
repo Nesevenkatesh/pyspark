@@ -1,0 +1,7 @@
+from pypark.sql import SparkSession
+spark = SparkSession.bulider.master("local").appName("adb").getorcreate()
+df = spark. read. table("sample_table")
+df.createorreplacetempview("temp_table")
+result = spark.sql("SWLECT COUNT(A) AS row_count FROM temp_table")
+df = spark.sql(count_qury)
+row_result = ("count_qury".frist()[0])
